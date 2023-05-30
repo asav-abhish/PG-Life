@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome | PG Life</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet" />
+    <link href="css/common.css" rel="stylesheet" />
+    <link href="css/home.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="header.css">
+
+</head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <body>
+    <div class="">
+        <?php include("header.php") ?>
+
+
+
+<div class="" style=" position: relative; max-width:2500px;">
+
+
+      <div class="search">
+        <div class="" style="display:flex;height:auto;width:auto;">
+
+          <input   class="search-values" type="text" id="qta_field" value="" placeholder="Search by City" />
+          <a href="" style="color:grey; text-decoration:none;" class="search-submit" onclick="this.href='available-pg.php?codes='+document.getElementById('qta_field').value">Search</a>
+
+        </div>
+
+              <?php if($_GET){ echo '<p style="color:white;font-size:30px;">'.$_GET['val'];} ?>
+      </div>
+
+
+
+<img class="mySlides " src="img/WhatsApp Image 2023-05-06 at 11.13.38 PM (1).jpeg" style="width:100%;height:500px;">
+<img class="mySlides" src="img/1 (61).jpg" style="width:100%;height:500px;">
+<img class="mySlides " src="img/1 (51).jpg" style="width:100%;height:500px;">
+<img class="mySlides " src="img/1 (54).jpg" style="width:100%;height:500px;">
+  <script>
+  var myIndex = 0;
+  carousel();
+
+  function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 2500);
+  }
+</script>
+
+
+
+
+
+<?php  include("colu.php") ?>
+
+<?php  include("testimonial/Testimonial.php") ?>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+     <?php  include("footer.php") ?>
+    </div>
+  </body>
+</html>
